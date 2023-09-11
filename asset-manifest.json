@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sales-react/static/css/main.8d6e0a1e.css",
+    "main.js": "/sales-react/static/js/main.7605a84b.js",
+    "index.html": "/sales-react/index.html",
+    "main.8d6e0a1e.css.map": "/sales-react/static/css/main.8d6e0a1e.css.map",
+    "main.7605a84b.js.map": "/sales-react/static/js/main.7605a84b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d6e0a1e.css",
+    "static/js/main.7605a84b.js"
+  ]
+}
