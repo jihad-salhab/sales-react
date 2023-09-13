@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import AdminIndex from './AdminApp/AdminIndex';
 import { Provider } from 'react-redux';
 import { store } from './Redux/Store';
@@ -11,13 +11,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
 
-          <Route path='/sales-react' element={<Temp />}></Route>
-          <Route path="/sales-react/AdminDashboard/*" element={<AdminIndex />}></Route>
+          <Route path='/' element={<Temp />}></Route>
+          <Route path="/AdminDashboard/*" element={<AdminIndex />}></Route>
+          <Route path='*' element={<div>Not Found</div>}></Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
 
   </React.StrictMode>

@@ -12,7 +12,7 @@ const Header = () => {
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="/navbarNavDropdown"
+            data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -25,7 +25,7 @@ const Header = () => {
                 <NavLink
                   className="nav-link "
                   aria-current="page"
-                  to="/sales-react/AdminDashboard/UserManagment"
+                  to="/AdminDashboard/UserManagment"
                 >
                   User Managment
                 </NavLink>
@@ -33,7 +33,7 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink
                   className="nav-link"
-                  to="/sales-react/AdminDashboard/GoalManagment"
+                  to="/AdminDashboard/GoalManagment"
                 >
                   Goal Managment
                 </NavLink>

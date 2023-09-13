@@ -10,7 +10,7 @@ function Temp() {
         <button
           className="btn btn-success"
           onClick={() => {
-            navigate("/sales-react/AdminDashboard");
+            navigate("/AdminDashboard");
           }}
         >
           Admin Dashboard
