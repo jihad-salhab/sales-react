@@ -6,11 +6,13 @@ import {
   resetUpdateState,
   setGoalToUpdate,
 } from "../../Redux/Slices/AdminSlice/GoalManagmentSlice";
+import { useNavigate } from "react-router-dom";
 
 function GoalList() {
   const { data, isError, error, isFetching, isSuccess } = useGetGoalsQuery();
   const [deleteGoal] = useDeleteGoalMutation();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   let content;
   if (isFetching) {
     content = (
@@ -32,6 +34,7 @@ function GoalList() {
                 <th>IsHidden</th>
                 <th>Image</th>
                 <th>Options</th>
+                <th>Detail</th>
               </tr>
             </thead>
             <tbody>
@@ -66,6 +69,19 @@ function GoalList() {
                       }}
                     >
                       Delete
+                    </button>
+                  </td>
+                  <td>
+                    {" "}
+                    <button
+                      className="btn btn-warning"
+                      onClick={() => {
+                        navigate(
+                          `/AdminDashboard/GoalManagment/Details/${goal.id}`
+                        );
+                      }}
+                    >
+                      Details
                     </button>
                   </td>
                 </tr>

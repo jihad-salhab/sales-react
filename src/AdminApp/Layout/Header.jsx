@@ -1,6 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { updateUserTypeState } from "../../Redux/Slices/SharedSlice/AppStateSlice";
+
 const Header = () => {
+  const dispatch = useDispatch();
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -73,6 +77,16 @@ const Header = () => {
                 </ul>
               </li> */}
             </ul>
+          </div>
+          <div className="d-flex align-items-center">
+            <button
+              className="btn btn-danger ms-3"
+              onClick={() => {
+                dispatch(updateUserTypeState(-1));
+              }}
+            >
+              Logout
+            </button>
           </div>
         </div>
       </nav>

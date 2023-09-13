@@ -4,7 +4,7 @@ import { Routes, Route, HashRouter } from 'react-router-dom';
 import AdminIndex from './AdminApp/AdminIndex';
 import { Provider } from 'react-redux';
 import { store } from './Redux/Store';
-import Temp from './Temp';
+import LoginPage from './LoginPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +14,7 @@ root.render(
       <HashRouter>
         <Routes>
 
-          <Route path='/' element={<Temp />}></Route>
+          <Route path='/' element={<LoginPage />}></Route>
           <Route path="/AdminDashboard/*" element={<AdminIndex />}></Route>
           <Route path='*' element={<div>Not Found</div>}></Route>
         </Routes>
